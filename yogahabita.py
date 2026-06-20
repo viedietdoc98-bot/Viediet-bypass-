@@ -233,6 +233,7 @@ async def yoga_otp(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def yoga_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle Yoga callbacks"""
     query = update.callback_query
+    await query.answer()
     data = query.data
     
     if data == "main_menu":
