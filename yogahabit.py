@@ -29,7 +29,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.environ.get("7893651923:AAGGxbRIqZEMCWF2rSNF8a4NxhpHaAnpRl0", "")
+# 🔑 YAHAN APNA TOKEN DALO
+BOT_TOKEN = os.environ.get("YOGABITE_BOT_TOKEN", "YOUR_YOGABITE_BOT_TOKEN_HERE")
 DATA_FILE = "yogabite_data.json"
 _BOT_USERNAME = ""
 
