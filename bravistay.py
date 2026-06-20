@@ -143,9 +143,10 @@ async def brev_otp(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def brev_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle Brevistay callbacks"""
     query = update.callback_query
+    await query.answer()
     data = query.data
     
-    if data == "brev_cancel":
+    if data == "brev_cancel" or data == "main_menu":
         await query.edit_message_text("❌ Cancelled.", reply_markup=cancel_menu())
         context.user_data.clear()
         return ConversationHandler.END
